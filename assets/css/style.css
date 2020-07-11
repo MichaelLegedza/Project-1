@@ -7,20 +7,20 @@ ul {
 }
 
 .section {
-    padding: 50px 0px;  /* Отступы у секции делаем только сверху и снизу */
+    padding: 50px 0px;
 }
 
 .section.section--dark {
     background-color: #445162;
     color: white;
-    /*height: 219px; НЕДОЛЖНО БЫТЬ ВЫСОТЫ - высота должна расчитываться на основе содержимого*/
+
 }
 
 .container {
     margin: 0 auto;
     max-width: 1280px;
-    /*height: 323px; НЕДОЛЖНО БЫТЬ ВЫСОТЫ - высота должна расчитываться на основе содержимого*/
-    
+
+
 }
 
 .container::before {
@@ -37,23 +37,21 @@ ul {
 
 .row__col {
     width: auto;
-    /*height: 220px; НЕДОЛЖНО БЫТЬ ВЫСОТЫ - высота должна расчитываться на основе содержимого*/
+
 }
 
 .row.row--center {
     justify-content: center;
 }
 
-/*.row__col .list { list сам по себе не зависимый блок и может быть как с отступом так и без него. row-col - может применяться везде и не логично завязываться на него*/
+
 .list {
-    /*padding-left: 50px; не у всех списков нужен определенный отступ поэтому отступ делаем в селекторе ".section.section--main .list"*/
-    list-style: none;  
+    list-style: none;
 }
 
 .row.row--space_between {
     justify-content: space-between;
     padding: 0px;
-    /*height: 225px; НЕДОЛЖНО БЫТЬ ВЫСОТЫ - высота должна расчитываться на основе содержимого*/
     width: 1230px;
     margin: 0px;
 }
@@ -64,9 +62,7 @@ h1.title {
     font-family: "Arial";
     font-weight: 500;
     line-height: 2.9rem;
-    /*margin: -16px 0px 28px 0px; -16 в данном случае костыль такого быть не должно.*/
     margin: 0px 0px 2.5rem 0px;
-    /*padding-left: 47px; У тебя на странице может быть много где h.title поэтому лучше написать селектор типа ".section.section--main h1.title"*/
 }
 
 .list span {
@@ -75,13 +71,6 @@ h1.title {
     font-family: "Arial";
 }
 
-/* .list с вложенными img может попадаться по всей странице - нужно конкретизировать в каком месте этот отступ нужен - ".section.section--main .list img" */
-/*.list img {
-    margin-right: 11px;
-}*/
-
-
-
 
 
 /* START: section 1 */
@@ -89,18 +78,12 @@ h1.title {
 .section.section--main .row {
     flex-direction: column;
 }
-/* При вынесении логики заметил что в одной колонке 2м блокам задается отступ слева - можно задать в одном месте отступ слева
-.section.section--main h1.title {
+
+.section.section--main .row__col:first-child {
     padding-left: 47px;
 }
-.section.section--main .list {
-    padding-left: 50px;
-}
-*/
-.section.section--main .row__col:first-child { /* общий отступ для содержимого первой колонки в секции мейн*/
-    padding-left: 47px;
-}
-.section.section--main .row__col:first-child .list {    /* подгонка */
+
+.section.section--main .row__col:first-child .list {
     padding-left: 3px;
 }
 
@@ -109,18 +92,19 @@ h1.title {
 }
 
 /* ≥576px */
-@media screen and (min-width: 576px){
-}
+@media screen and (min-width: 576px) {}
+
 /* ≥768px */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .section.section--main .row {
         flex-direction: row;
     }
-} 
+}
+
 /* ≥992px */
-@media screen and (min-width: 992px){
-} 
+@media screen and (min-width: 992px) {}
+
 /* ≥1200px */
-@media screen and (min-width: 1200px){
-} 
+@media screen and (min-width: 1200px) {}
+
 /* END: section 1 */
