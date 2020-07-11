@@ -5,6 +5,7 @@ body {
 ul {
     margin: 0px;
 }
+
 img {
     max-width: 100%;
 }
@@ -50,6 +51,8 @@ img {
 
 .row.row--space_between {
     justify-content: space-between;
+    margin-bottom: -7px;
+    /* Временное решение высоты контейнера */
 }
 
 h1.title {
@@ -60,11 +63,31 @@ h1.title {
     line-height: 2.9rem;
     margin: 0px 0px 2.5rem 0px;
 }
-
+.row__col h2.title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #445161;
+    font-weight: 500;
+    margin-top: -7px;
+    /* Тут аналогично минусовое значени, но кажется подходит */
+}
 .list span {
     font-size: 20px;
     line-height: 36px;
     font-family: "Arial";
+}
+.row__col p {
+    font-size: 16px;
+    line-height: 24px;
+    white-space: pre-line;
+    margin-top: 0;
+}
+.container .row__col:first-child {
+    padding-left: 35px;
+}
+.row__col .second-p {
+    margin-top: -7px;
+    /* Наверняка это не совсем верный выбор, но практически - подходит */
 }
 
 
@@ -73,11 +96,8 @@ h1.title {
 /* <576px */
 .section.section--main .row {
     flex-direction: column;
-    align-items: center;
 }
-.section.section--main .row__col:first-child {
-    margin-bottom: 40px;
-}
+
 
 .section.section--main .row__col:first-child .list {
     padding-left: 3px;
@@ -91,17 +111,12 @@ h1.title {
 @media screen and (min-width: 576px) {}
 
 /* ≥768px */
-@media screen and (min-width: 768px) {
-    
-}
+@media screen and (min-width: 768px) {}
 
 /* ≥992px */
 @media screen and (min-width: 992px) {
     .section.section--main .row {
         flex-direction: row;
-    }
-    .section.section--main .row__col:first-child {
-        margin-bottom: 40px;
     }
 }
 
@@ -109,6 +124,9 @@ h1.title {
 @media screen and (min-width: 1200px) {
     .section.section--main .row__col:first-child {
         padding-left: 31px;
+    }
+    .row__col img {
+        margin-right: 35px;
     }
 }
 
@@ -121,15 +139,12 @@ h1.title {
 @media screen and (min-width: 576px) {}
 
 /* ≥768px */
-@media screen and (min-width: 768px) {
-    
-}
+@media screen and (min-width: 768px) {}
+
 /* ≥992px */
-@media screen and (min-width: 992px) {
-    
-}
+@media screen and (min-width: 992px) {}
+
 /* ≥1200px */
-@media screen and (min-width: 1200px) {
-    
-}
+@media screen and (min-width: 1200px) {}
+
 /* END: section 2 */
