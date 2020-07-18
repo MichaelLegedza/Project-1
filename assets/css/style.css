@@ -11,13 +11,17 @@ img {
 }
 
 .section {
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .section.section--dark {
     background-color: #445162;
     color: white;
 
+}
+.section.section--pluses {
+    background-color: #f5f5f5;
+    color: #333333;
 }
 
 .container {
@@ -55,7 +59,7 @@ img {
     /* Временное решение высоты контейнера */
 }
 
-.row__col h1.title {
+h1.title {
     font-size: 60px;
     color: #ffffff;
     font-family: "Arial";
@@ -63,13 +67,23 @@ img {
     line-height: 2.9rem;
     margin: 0px 0px 2.5rem 0px;
 }
-.row__col h2.title {
+.section.section--white h2.title {
+    font-size: 30px;
+    color: #445161;
+    font-weight: 500;
+    margin-bottom: 23px;
+}
+.section.section--white p {
+    margin: 0 0 11px 0;
+}
+.section--pluses h2.title {
     font-size: 30px;
     line-height: 36px;
     color: #445161;
     font-weight: 500;
-    margin-top: -7px;
-    /* Тут аналогично минусовое значение, но кажется подходит */
+    text-align: center;
+    margin: -5px 0px;
+    padding-top: 2px;
 }
 .list span {
     font-size: 20px;
@@ -82,20 +96,175 @@ img {
     white-space: pre-line;
     margin-top: 0;
 }
+.section.section--pluses p {
+    font-size: 16px;
+    line-height: 24px;
+}
 .container .row__col:first-child {
     padding-left: 35px;
 }
-.row__col .second-p {
-    margin-top: -7px;
-    /* Наверняка это не совсем верный выбор, но практически - подходит */
+.grid.grid--pluses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5em 5em 5em;
+    margin: 13px 50px 0px 50px;
+    row-gap: 18px;
 }
+.grid__cell  {
+    display: flex;
+    max-height: 300px;
+}
+.grid__cell img {
+    margin: 19px 0px 0px 0px;
+}
+h2.title {
+    font-size: 30px;
+    line-height: 0;
+    color: #445161;
+    text-align: center;
+    font-weight: 500;
+    margin: 17px 0 0 0;
+    padding: 0px;
+}
+div.text {
+    margin: -2px 15px 0px 9px;
+}
+.grid.grid--scrinshots {
+    margin: 0 60px 0 30px;
+}
+.grid.grid--scrinshots {
+    display: grid;
+    grid-template-columns: 589px 580px;
+    grid-template-rows: 50% 50%;
+    margin: 45px 0px 0px 50px;
+    row-gap: 14px;
+}
+.grid.grid--scrinshots p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 500;
+}
+.grid.grid--scrinshots img {
+    margin: 0 15px 0 0;
+}
+.grid.grid--scrinshots h3 {
+    font-size: 24px;
+    color: #445161;
+    font-weight: 500;
+    margin: 0;
+    line-height: 16px;
+}
+.section.section--rewiews {
+    background-color: #f5f5f5;
+}
+.grid.grid--rewiews {
+    display: grid;
+    grid-template-columns: 606px 606px;
+    grid-template-rows: 50% 50%;
+    margin: 45px 0px 24px 50px;
+    row-gap: 24px;
+}
+.grid.grid--rewiews img {
+    border-radius: 50%;
+    margin: 0 0px 0 0;
+}
+.section.section--rewiews h2.title {
+    margin: 7px 0 0 0;
+}
+.grid.grid--rewiews .comment {
+    background-color: #ebebeb;
+    margin: 0px 0px 0px 0px;
+    padding: 0 25px 0 43px;
+}
+.comment p {
+    font-size: 14px;
+    color: #333333;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 14px 0px 6px 0;
+}
+.grid.grid--rewiews a {
+    font-size: 14px;
+    color: #989898;
+    text-decoration: none;
+}
+
+
+.buy {
+    font-size: 30px;
+    line-height: 36px;
+    color: #445161;
+    text-align: center;
+    margin: -6px 0 27px 0;
+    padding: 0px 0px 0px 0px;
+}
+.vertical__row {
+    display: flex;
+    align-items: flex-end;
+    max-width: 1035px;
+    margin: 0 auto;
+}
+.vertical__column {
+    padding: 0 22.5px;
+    flex: 0 1 33.333%;
+}
+.vertical__item {
+    background-color: #445162;
+    color:white ;
+    border-radius: 5px;
+    border: 2px solid #445162;
+    padding: 0 0 20px 0;
+}
+.vertical__subtitle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 14px;
+    color: white;
+    padding: 17px 0 18px 0;
+}
+.vertical__price {
+    text-align: center;
+    font-size: 40px;
+    line-height: 30px;
+    color: #445162;
+    background-color: #fff;
+    padding: 20px 0;
+}
+.vertical__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0;
+}
+.vertical__text ol {
+    padding: 0 0 0px 35px;
+}
+.button {
+    display: block;
+    font-size: 18px;
+    line-height: 46px;
+    height: 40px;
+    color: #445161;
+    background-color: white;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+
+
 
 
 
 /* START: section 1 */
 
 /* <576px */
-.row__col h1.title {
+h1.title {
     font-size: 42px;
     font-weight: 500;
     line-height: 2.9rem;
@@ -125,12 +294,12 @@ img {
     margin-right: 11px;
 }
 
-/* ≥576px */
+/* ?576px */
 @media screen and (min-width: 576px) {
     .row__col h1.title {
         text-align: unset;
     }
-/* ≥768px */
+/* ?768px */
 @media screen and (min-width: 768px) {
     .row__col .list {
         margin-bottom: 10px;
@@ -142,14 +311,14 @@ img {
     }
 }
 
-/* ≥992px */
+/* ?992px */
 @media screen and (min-width: 992px) {
-    .row__col h1.title {
+    h1.title {
         font-size: 60px;
         text-align: unset;
         margin-bottom: 2.5rem;
     }
-    .section.section.section--dark .row__col:first-child {
+    .section.section--dark .row__col:first-child {
         padding-left: 35px;
     }
     .section.section--main .row {
@@ -160,7 +329,7 @@ img {
     }
 }
 
-/* ≥1200px */
+/* ?1200px */
 @media screen and (min-width: 1200px) {
     .section.section--main .row__col:first-child {
         padding-left: 31px;
@@ -171,8 +340,6 @@ img {
 }
 
 /* END: section 1 */
-
-
 
 
 
@@ -202,17 +369,17 @@ img {
     margin-top: -7px;
     text-align: center;
 }
-/* ≥576px */
+/* ?576px */
 @media screen and (min-width: 576px) {
     .row__col h2.title {
         text-align: unset;
     }
 }
 
-/* ≥768px */
+/* ?768px */
 @media screen and (min-width: 768px) {}
 
-/* ≥992px */
+/* ?992px */
 @media screen and (min-width: 992px) {
     .section.section--white .row {
         flex-direction: row;
@@ -224,7 +391,7 @@ img {
     }
 }
 
-/* ≥1200px */
+/* ?1200px */
 @media screen and (min-width: 1200px) {
     .row__col p {
         font-size: 16px;
