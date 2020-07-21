@@ -3,3 +3,5 @@
 * normilize
 * emmet
 * git
+* flex
+* adaptive
