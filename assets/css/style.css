@@ -7,10 +7,6 @@ ul {
 img {
     max-width: 100%;
 }
-
-    
-    /* SECTION 1 */
-
 .section {
     padding: 50px 0;
     width: 100%;
@@ -24,6 +20,9 @@ img {
     clear: both;
     display: table;
 }
+    
+    /* SECTION 1 */
+
 .section.section--dark {
     background-color: #445162;
     color: white;
@@ -48,6 +47,11 @@ h1.title {
 }
 ul.list {
     list-style: none;
+}
+.list span {
+    font-size: 20px;
+    line-height: 36px;
+    font-family: "Arial";
 }
 
 /* START: section 1-media */
@@ -275,31 +279,24 @@ h1.title {
     color: #445161;
     font-weight: 500;
     text-align: center;
-    margin: -5px 0px;
-    padding-top: 2px;
+    margin: 0;
 }
-.list span {
-    font-size: 20px;
-    line-height: 36px;
-    font-family: "Arial";
-}
+
 .section--pluses p {
-    font-size: 16px;
     line-height: 24px;
 }
 .grid.grid--pluses {
     display: grid;
     grid-template-columns: minmax(150px,1fr) minmax(150px,1fr);
-    grid-template-rows: 5em 5em 5em;
-    margin: 13px 50px 0px 50px;
-    row-gap: 18px;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 11px 50px 0px 50px;
+    row-gap: 5px;
 }
 .grid__cell  {
     display: flex;
-    max-height: 300px;
 }
 .grid__cell img {
-    margin: 19px 0px 0px 0px;
+    padding: 14px 0 0 0;
 }
 h2.title {
     font-size: 30px;
@@ -310,10 +307,19 @@ h2.title {
     margin: 17px 0 0 0;
     padding: 0px;
 }
-div.text {
-    margin: -2px 15px 0px 9px;
+.text {
+    display: flex;
 }
-.grid.grid--scrinshots {
+div.text p {
+    margin: 9px 0px 12px 0;
+    padding: 0 0 0 9px;
+}
+
+
+
+
+
+.grid--scrinshots {
     margin: 0 60px 0 30px;
 }
 .grid.grid--scrinshots {
@@ -375,6 +381,7 @@ div.text {
     text-decoration: none;
 }
 
+    /* Section 6 */
 
 .buy {
     font-size: 30px;
@@ -428,6 +435,7 @@ div.text {
 }
 .vertical__text ol {
     padding: 0 0 0px 35px;
+    list-style: none;
 }
 
 
@@ -446,6 +454,9 @@ div.text {
     border-radius: 5px;
 }
 
+    /* Section 6 end */
+
+    /* Section 7 */
 
 .section.section--form {
     background-color: #445162;
@@ -486,6 +497,7 @@ div.text {
     padding: 15px 0 0 0;
 }
 
+
 input, textarea {
     width: 479px;
     margin: 0 6px 20px 0;
@@ -496,6 +508,8 @@ textarea {
     padding: 10px 10px 0 10px;
     margin: 0 6px 18px 0;
 }
+
+
 .send {
     display: block;
     font-size: 16px;
@@ -510,11 +524,9 @@ textarea {
     border-radius: 5px;
     padding: 7px 0px 7px 0px;
 }
-
 .footer {
     margin: 0 auto;
 }
-
 .footer span {
     font-size: 12px;
     letter-spacing: 0px;
@@ -525,6 +537,8 @@ textarea {
     margin: 0 0 2px 0;
     padding: 3px 0 0px 0;
 }
+
+  /* End */
 
 
 
