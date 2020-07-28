@@ -7,6 +7,9 @@ ul {
 img {
     max-width: 100%;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 .section {
     padding: 50px 0;
     width: 100%;
@@ -594,9 +597,10 @@ div.text p {
 
 .section--form {
     background-color: #445162;
-    padding: 48px 0 50px 0;
+    padding: 50px 0;
 }
 .section--form .row {
+    flex-direction: column;
     justify-content: center;
 }
 h2.contacts {
@@ -604,52 +608,77 @@ h2.contacts {
     color: #ffffff;
     text-align: center;
     font-weight: 500;
-    margin: 0 0 22px 0;
 }
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.user__data {
     width: 100%;
-}
-.form__block {
-    display: flex;
-    justify-content: center;
-}
-.form__social {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-    color: #ffffff;
+    margin-right: 6px;
 }
-.form__social img {
-    margin-right: 10px;
-}
-input, textarea {
+.form__name {
+    padding: 10px;
+    margin-top: 21px;
     margin-bottom: 20px;
     border-radius: 5px;
-    line-height: 36px;
 }
-.send {
-    display: block;
-    font-size: 16px;
-    line-height: 26px;
-    width: 50%;
-    color: #445162;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: white;
-    text-align: center;
-    text-decoration: none;
+.form__mail  {
+    margin-bottom: 20px;
+    padding: 10px;
     border-radius: 5px;
 }
+.form__area {
+    margin-bottom: 21px;
+    padding: 10px 10px 14px 10px;
+    border-radius: 5px;
+}
+.send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #445162;
+    padding: 11px 47px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.form__social {
+    width: 245px;
+    margin-left: 30px;
+}
+.form__social:first-child {
+    margin-top: 22px;
+}
+.form__social a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.form__social a:first-child {
+    margin-top: 22px;
+}
+.form__social a:last-child {
+    padding-top: 15px;
+}
+.form__social img {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
 
 /* <576px */
 @media screen and (min-width: 576px) {
-    
+    .section--form .row {
+        flex-direction: unset ;
+    }
+    form {
+        width: 501px;
+    }
 }
 
 /* <768px */
@@ -671,10 +700,10 @@ input, textarea {
 
 
 
-.footer {
+footer {
     margin: 0 auto;
 }
-.footer span {
+footer span {
     font-size: 12px;
     letter-spacing: 0px;
     line-height: 24px;
