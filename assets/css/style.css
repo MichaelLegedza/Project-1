@@ -421,10 +421,10 @@ div.text p {
     content: "";
     display: inline-block;
     margin-top: 25px;
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-style: solid;
-    border-width: 15px 15px 15px 0;
+    border-width: 15px 15px 15px 0px;
     border-color: transparent #ebebeb transparent transparent;
 }
 .grid--rewiews .comment {
@@ -485,10 +485,7 @@ div.text p {
 .section--buying {
     padding: 45px 0px 51px 0px;
 }
-.buy {
-    font-size: 30px;
-    color: #445161;
-    text-align: center;
+.section--buying h2.title {
     margin-bottom: 28px;
 }
 .section--buying .row {
@@ -544,6 +541,11 @@ div.text p {
     text-transform: uppercase;
     border-radius: 5px;
 }
+.button:hover {
+    background-color: greenyellow;
+    box-shadow: 0px 3px 10px 0px greenyellow;
+    color: mediumpurple;
+}
 
 
 /* <992px */
@@ -581,33 +583,34 @@ div.text p {
     flex-direction: column;
     justify-content: center;
 }
-h2.contacts {
+.section--form h2.title {
     font-size: 30px;
     color: #ffffff;
     text-align: center;
     font-weight: 500;
 }
-form {
-    width: 100%;
+.form {
+    min-width: 50%;
     display: flex;
     flex-direction: column;
-    margin-right: 6px;
+    margin: 0px 25px;
+}
+input {
+    padding-left: 12px;
+}
+input, textarea {
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    min-height: 40px;
 }
 .form__name {
-    padding: 10px;
     margin-top: 21px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-.form__mail  {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 5px;
 }
 .form__area {
-    margin-bottom: 21px;
-    padding: 10px 10px 14px 10px;
-    border-radius: 5px;
+    padding: 11px 0px 0px 13px;
+    min-height: 160px;
+    resize: none;
 }
 .send {
     display: flex;
@@ -623,43 +626,75 @@ form {
     font-weight: 700;
 }
 .send:hover {
-    background-color: turquoise;
+    background-color: greenyellow;
+    box-shadow: 0px 1px 5px 0px greenyellow;
+    color: mediumpurple;
 }
-.form__social {
-    width: 245px;
-    margin-left: 30px;
+.social__network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 21px;
 }
-.form__social:first-child {
-    margin-top: 22px;
-}
-.form__social a {
-    display: block;
+.social__network a:not(:last-child) {
+    display: flex;
+    align-items: center;
     color: #fff;
     text-decoration: none;
-    margin-bottom: 15px;
+    padding-bottom: 19px;
 }
-.form__social a:first-child {
+.social__network a:first-child {
     margin-top: 22px;
 }
-.form__social a:last-child {
-    padding-top: 15px;
+.social__network a:last-child {
+    margin-bottom: 22px;
 }
-.form__social img {
-    padding-left: 10px;
-    padding-right: 4px;
+.social__network img {
+    padding-right: 5px;
 }
-
+.social__icons {
+    min-width: 242px;
+    min-height: 42px;
+    background: url('../img/sprite.png') no-repeat;
+    margin-top: 15px;
+}
+.social__icons ul {
+    list-style: none;
+    padding: 0px;
+}
 
 /* <576px */
 @media screen and (min-width: 576px) {
     .section--form .row {
-        flex-direction: unset ;
+        flex-direction: column ;
     }
-    form {
-        width: 501px;
+    .social__network {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
+/* <768px */
+@media screen and (min-width: 768px) {
+    .section--form .row {
+        flex-direction: row;
+    }
+    .social__network {
+        display: block;
+    }
+}
+/* <992px */
+@media screen and (min-width: 992px) {
+    .form {
+        min-width: 501px;
+        margin: 0px 25px;
+    }
+    .social__network {
+        min-width: 242px;
+        margin: 0px 20px;
+    }
+}
     /* End section 7 */
 
     /* Footer */
