@@ -60,8 +60,6 @@ ul.list {
 /* <576px */
 h1.title {
     font-size: 42px;
-    font-weight: 500;
-    line-height: 2.9rem;
     margin: 0px 0px 1.5rem 0px;
     text-align: center;
 }
@@ -139,11 +137,6 @@ h1.title {
 .section--white {
     padding: 44px 0px 46px 0px;
 }
-.section--white h2.title {
-    font-size: 30px;
-    color: #445161;
-    font-weight: 500;
-}
 .section--white p {
     font-size: 16px;
     white-space: pre-line;
@@ -160,12 +153,11 @@ h1.title {
 }
 .section--white h2.title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0px 0px 30px 0px;
     padding: 15px 0px 20px 0px;
 }
 .section--white p {
-    font-size: 16px;
     line-height: 24px;
     white-space: normal;
     margin: 0px 0px 30px 0px;
@@ -215,14 +207,10 @@ h1.title {
 /* <1200px */
 @media screen and (min-width: 1200px) {
     .section--white h2.title {
-        font-size: 30px;
-        color: #445161;
-        font-weight: 500;
         margin: 0px 0px 24px 0px;
         padding: 0px;
     }
     .section--white p {
-        font-size: 16px;
         white-space: pre-line;
         margin: 0px 0px 11px 0px;
     }
@@ -250,10 +238,6 @@ h1.title {
     padding: 45px 0px 37px 0px;
 }
 .section--pluses h2.title {
-    font-size: 30px;
-    color: #445161;
-    font-weight: 500;
-    text-align: center;
     margin: 0px 0px 17px 0px;
 }
 .section--pluses .grid--pluses {
@@ -295,8 +279,6 @@ div.text p {
         margin: 0px 35px;
     }
     div.text p {
-        font-size: 16px;
-        line-height: 24px;
         margin-top: 6px;
         padding-left: 9px;
     }
@@ -377,12 +359,7 @@ div.text p {
         align-items: unset;
     }
     .grid--scrinshots h3 {
-        font-size: 24px;
-        color: #445161;
-        font-weight: 500;
         text-align: unset;
-    }
-    .grid--scrinshots h3 {
         margin: 0px 0px 10px 15px;
         padding: 0px;
     }
@@ -481,7 +458,7 @@ div.text p {
 
     /* Section 6 */
 .section--buying {
-    padding: 45px 0px 51px 0px;
+    padding: 45px 0px 48px 0px;
 }
 .section--buying h2.title {
     margin: 0px 0px 30px 0px;
@@ -528,7 +505,8 @@ div.text p {
 .button {
     display: block;
     font-size: 18px;
-    line-height: 46px;
+    line-height: 40px;
+    width: 260px;
     height: 40px;
     color: #445161;
     background-color: white;
@@ -538,6 +516,7 @@ div.text p {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
+    border: none;
 }
 .button:hover {
     background-color: greenyellow;
@@ -582,10 +561,7 @@ div.text p {
     justify-content: center;
 }
 .section--form h2.title {
-    font-size: 30px;
     color: #ffffff;
-    text-align: center;
-    font-weight: 500;
     margin: 0px;
 }
 .form {
@@ -612,7 +588,7 @@ input, textarea {
     resize: none;
 }
 .send {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     color: #445162;
@@ -623,6 +599,7 @@ input, textarea {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    border: none;
 }
 .send:hover {
     background-color: greenyellow;
@@ -642,6 +619,10 @@ input, textarea {
     text-decoration: none;
     padding-bottom: 19px;
 }
+.social__network a:nth-child(4) {
+    padding: 0px;
+    margin-bottom: 34px;
+}
 .social__network a:first-child {
     margin-top: 22px;
 }
@@ -652,14 +633,45 @@ input, textarea {
     padding-right: 5px;
 }
 .social__icons {
+    display: flex;
     min-width: 242px;
     min-height: 42px;
-    background: url('../img/sprite.png') no-repeat;
     margin-top: 15px;
 }
 .social__icons ul {
     list-style: none;
     padding: 0px;
+}
+.twitter, .facebook, .inst, .google, .youtube {
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+    display: flex;
+    width: 46px;
+    height: 46px;
+}
+.twitter {
+    background-position: 0px 0px;
+}
+.facebook {
+    background-position: -48px -0px;
+}
+.inst {
+    background-position: -96px -0px;
+}
+.google {
+    background-position: -146px -0px;
+}
+.youtube {
+    background-position: -194px -0px;
+}
+.row .social__network .social__icons a {
+    width: 46px;
+    height: 46px;
+    margin: 0px;
+    border-radius: 5px;
+}
+.row .social__network .social__icons a:active {
+    box-shadow: 0px 5px 10px 10px chocolate;
 }
 
 /* <576px */
@@ -702,14 +714,20 @@ footer {
     margin: 0px auto;
 }
 footer span {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 8px;
+    line-height: 18px;
     color: #445162;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
+/* <576px */
+@media screen and (min-width: 576px) {
+    footer span {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
     /* End */
 
 
