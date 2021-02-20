@@ -1,6 +1,6 @@
 # Мой первый проект #
 
-[Demo](https://hades-corp.github.io/Project-1/ "Project")
+[Demo](https://MichaelLegedza.github.io/Project-1/ "Project")
 
 ## Изученые темы ##
 
